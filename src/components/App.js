@@ -7,6 +7,10 @@ import youtube from "../api/youtube";
 class App extends React.Component {
   state = { videos: [], selectedVideo: null };
 
+  componentDidMount() {
+    this.onTermSubmit("solidity");
+  }
+
   async onTermSubmit(term) {
     const response = await youtube.get("/search", { params: { q: term } });
     this.setState({

@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./components/App";
 
-const element = document.getElementById("root");
-const root = ReactDOM.createRoot(element);
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-class App extends React.Component {
-  render() {}
-}
-
-root.render(<App />);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
